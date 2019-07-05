@@ -1,0 +1,56 @@
+/*******************************************/
+/**********file——4**********/
+primal map :
+_ s _ _ _ 
+x x x x _ 
+_ x x x _ 
+_ _ g _ _ 
+
+
+**********
+search num : 1
+search successfully !!
+_ s _ _ _ 
+_ o _ _ _ 
+_ o _ _ _ 
+_ o g _ _ 
+shortest path step nums : 4    expand point nums : 4
+
+
+**********
+search num : 2
+search successfully !!
+_ s o _ _ 
+_ x o _ _ 
+_ _ o _ _ 
+_ _ g _ _ 
+shortest path step nums : 4    expand point nums : 4
+
+
+**********
+search num : 3
+search successfully !!
+_ _ s o _ 
+_ x x o _ 
+_ _ _ o _ 
+_ _ g o _ 
+shortest path step nums : 5    expand point nums : 6
+
+
+**********
+search num : 4
+search successfully !!
+_ _ _ s o 
+_ x x x o 
+_ _ _ _ o 
+_ _ g o o 
+shortest path step nums : 6    expand point nums : 7
+
+
+-——-——-——-——-——-——-——-———-——-——-——-——-
+|final result: get goal successflly!!|
+-——-——-——-——-——-——-——-———-——-——-——-——-
+
+The nums of search : 4  total expanded nums : 21
+
+/*******************************************/

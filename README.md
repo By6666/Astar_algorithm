@@ -8,3 +8,5 @@
 
 * Algorithm code file [Astar_algorithm.cpp](./Astar_algorithm.cpp).
 
+* Final outputs in th folder [outputs](./outputs)
+

@@ -1,0 +1,22 @@
+/*******************************************/
+/**********file——1**********/
+primal map :
+_ g 
+s x 
+
+
+**********
+search num : 1
+search successfully !!
+o g 
+s _ 
+shortest path step nums : 2    expand point nums : 2
+
+
+-——-——-——-——-——-——-——-———-——-——-——-——-
+|final result: get goal successflly!!|
+-——-——-——-——-——-——-——-———-——-——-——-——-
+
+The nums of search : 1  total expanded nums : 2
+
+/*******************************************/

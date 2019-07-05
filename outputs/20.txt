@@ -1,0 +1,312 @@
+/*******************************************/
+/**********file——20**********/
+primal map :
+_ _ _ _ _ _ _ _ x 
+_ x _ _ _ _ _ x _ 
+_ _ x x x x x _ _ 
+_ _ _ x g _ _ _ _ 
+_ _ _ _ x _ _ _ _ 
+x x x _ s x x _ x 
+_ _ _ _ x _ _ _ _ 
+_ _ _ x _ x _ _ _ 
+_ _ x _ _ _ _ _ _ 
+_ x _ _ _ _ _ x _ 
+_ _ _ _ _ _ _ _ x 
+
+
+**********
+search num : 1
+search successfully !!
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ g _ _ _ _ 
+_ _ _ _ o _ _ _ _ 
+_ _ _ _ s _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+shortest path step nums : 2    expand point nums : 2
+
+
+**********
+search num : 2
+search successfully !!
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ o g _ _ _ _ 
+_ _ _ o x _ _ _ _ 
+_ _ _ o s x _ _ _ 
+_ _ _ _ x _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+shortest path step nums : 4    expand point nums : 4
+
+
+**********
+search num : 3
+search successfully !!
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ o o o _ _ _ _ 
+_ _ o x g _ _ _ _ 
+_ _ o s x _ _ _ _ 
+_ _ x _ _ x _ _ _ 
+_ _ _ _ x _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+shortest path step nums : 6    expand point nums : 10
+
+
+**********
+search num : 4
+search successfully !!
+_ _ _ _ _ _ _ _ _ 
+_ o o o _ _ _ _ _ 
+_ o x o o _ _ _ _ 
+_ o s x g _ _ _ _ 
+_ _ _ _ x _ _ _ _ 
+_ _ x _ _ x _ _ _ 
+_ _ _ _ x _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+shortest path step nums : 8    expand point nums : 17
+
+
+**********
+search num : 5
+search successfully !!
+o o o _ _ _ _ _ _ 
+o x o o _ _ _ _ _ 
+o s x o o _ _ _ _ 
+o o _ x g _ _ _ _ 
+_ _ _ _ x _ _ _ _ 
+_ _ x _ _ x _ _ _ 
+_ _ _ _ x _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+shortest path step nums : 12    expand point nums : 24
+
+
+**********
+search num : 6
+search successfully !!
+_ _ _ _ _ _ _ _ _ 
+_ x _ s o _ _ _ _ 
+_ _ x x o _ _ _ _ 
+_ _ _ x g _ _ _ _ 
+_ _ _ _ x _ _ _ _ 
+_ _ x _ _ x _ _ _ 
+_ _ _ _ x _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+shortest path step nums : 3    expand point nums : 3
+
+
+**********
+search num : 7
+search successfully !!
+_ _ _ _ _ _ _ _ _ 
+_ x _ _ s o _ _ _ 
+_ _ x x x o _ _ _ 
+_ _ _ x g o _ _ _ 
+_ _ _ _ x _ _ _ _ 
+_ _ x _ _ x _ _ _ 
+_ _ _ _ x _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+shortest path step nums : 4    expand point nums : 5
+
+
+**********
+search num : 8
+search successfully !!
+_ _ _ _ _ _ _ _ _ 
+_ x _ _ _ s o _ _ 
+_ _ x x x x o _ _ 
+_ _ _ x g o o _ _ 
+_ _ _ _ x _ _ _ _ 
+_ _ x _ _ x _ _ _ 
+_ _ _ _ x _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+shortest path step nums : 5    expand point nums : 6
+
+
+**********
+search num : 9
+search successfully !!
+_ _ _ _ _ _ o o o 
+_ x _ _ _ _ s x o 
+_ _ x x x x x _ o 
+_ _ _ x g o o o o 
+_ _ _ _ x _ _ _ _ 
+_ _ x _ _ x _ _ _ 
+_ _ _ _ x _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+shortest path step nums : 10    expand point nums : 18
+
+
+**********
+search num : 10
+search successfully !!
+o o o _ _ _ o s x 
+o x o o o o o x _ 
+o _ x x x x x _ _ 
+o _ _ x g o o _ _ 
+o _ _ _ x _ o _ _ 
+o _ x _ _ x o _ _ 
+o _ _ _ x o o _ _ 
+o o o o o o _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+shortest path step nums : 28    expand point nums : 49
+
+
+**********
+search num : 11
+search successfully !!
+_ _ _ _ _ _ _ _ x 
+_ x _ _ _ _ _ x _ 
+_ _ x x x x x _ _ 
+o o _ x g o o _ _ 
+s o _ _ x _ o _ _ 
+x o x _ _ x o _ _ 
+_ o _ _ x o o _ _ 
+_ o o o o o _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+shortest path step nums : 17    expand point nums : 47
+
+
+**********
+search num : 12
+search successfully !!
+_ _ _ _ _ _ _ _ x 
+_ x _ _ _ _ _ x _ 
+_ _ x x x x x _ _ 
+_ o o x g o o _ _ 
+_ s o o x _ o _ _ 
+x x x o _ x o _ _ 
+_ _ _ o x o o _ _ 
+_ _ _ o o o _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+shortest path step nums : 16    expand point nums : 38
+
+
+**********
+search num : 13
+search successfully !!
+_ _ _ _ _ _ _ _ x 
+_ x _ _ _ _ _ x _ 
+_ _ x x x x x _ _ 
+_ _ _ x g o o _ _ 
+_ _ _ _ x _ o _ _ 
+x x x _ _ x o _ _ 
+_ _ o s x o o _ _ 
+_ _ o x o o _ _ _ 
+_ _ o o o _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+shortest path step nums : 14    expand point nums : 36
+
+
+**********
+search num : 14
+search successfully !!
+_ _ _ _ _ _ _ _ x 
+_ x _ _ _ _ _ x _ 
+_ _ x x x x x _ _ 
+_ _ _ x g o o _ _ 
+_ _ _ _ x _ o _ _ 
+x x x _ _ x o _ _ 
+_ o o _ x o o _ _ 
+_ o s x o o _ _ _ 
+_ o x o o _ _ _ _ 
+_ o o o _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+shortest path step nums : 18    expand point nums : 43
+
+
+**********
+search num : 15
+search successfully !!
+_ _ _ _ _ _ _ _ x 
+_ x _ _ _ _ _ x _ 
+_ _ x x x x x _ _ 
+_ _ _ x g o o _ _ 
+_ _ _ _ x _ o _ _ 
+x x x _ _ x o _ _ 
+o o _ _ x o o _ _ 
+o o _ x o o _ _ _ 
+o s x o o _ _ _ _ 
+o x o o _ _ _ _ _ 
+o o o _ _ _ _ _ _ 
+shortest path step nums : 22    expand point nums : 44
+
+
+**********
+search num : 16
+search successfully !!
+_ _ _ _ _ _ _ _ x 
+_ x _ _ _ _ _ x _ 
+_ _ x x x x x _ _ 
+_ _ _ x g o o _ _ 
+_ _ _ _ x _ o _ _ 
+x x x _ _ x o _ _ 
+_ _ _ _ x _ o _ _ 
+_ _ _ x s x o _ _ 
+_ _ x _ o o o _ _ 
+_ x _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+shortest path step nums : 10    expand point nums : 13
+
+
+**********
+search num : 17
+search successfully !!
+_ _ _ _ _ _ _ _ x 
+_ x _ _ _ _ _ x _ 
+_ _ x x x x x _ _ 
+_ _ _ x g o o o _ 
+_ _ _ _ x _ _ o _ 
+x x x _ _ x x o _ 
+_ _ _ _ x _ s o _ 
+_ _ _ x _ x _ _ _ 
+_ _ x _ _ _ _ _ _ 
+_ x _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ 
+shortest path step nums : 7    expand point nums : 10
+
+
+-——-——-——-——-——-——-——-———-——-——-——-——-
+|final result: get goal successflly!!|
+-——-——-——-——-——-——-——-———-——-——-——-——-
+
+The nums of search : 17  total expanded nums : 369
+
+/*******************************************/
