@@ -18,7 +18,7 @@ struct CellInfo {
   bool operator<(const CellInfo& pos) const {
     // if f-vaule 相同，比较 g-vaule
     if (all_cost_ == pos.all_cost_)
-      return cost_to_start_ > pos.cost_to_start_;
+      return cost_to_start_ < pos.cost_to_start_;
     else
       return all_cost_ > pos.all_cost_;
   }
