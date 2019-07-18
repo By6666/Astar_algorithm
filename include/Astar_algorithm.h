@@ -10,6 +10,9 @@
 
 #include "grid_input.h"
 
+void SearchOneMap(int map_num_);  //对一张地图进行算法搜索
+void PrintSumResult();            //打印结果统计
+
 //每一个cell的信息，使用结构体定义
 struct CellInfo {
   double all_cost_;       //总花费
@@ -18,13 +21,11 @@ struct CellInfo {
   bool operator<(const CellInfo& pos) const {
     // if f-vaule 相同，比较 g-vaule
     if (all_cost_ == pos.all_cost_)
-      return cost_to_start_ < pos.cost_to_start_;
+      return cost_to_start_ > pos.cost_to_start_;
     else
       return all_cost_ > pos.all_cost_;
   }
 };
-
-void SearchOneMap(int map_num_);  //对一张地图进行算法搜索
 
 class Astar {
  public:
@@ -40,14 +41,6 @@ class Astar {
     //曼哈顿距离
     return fabs(current.first - goal_pos_.first) +
            fabs(current.second - goal_pos_.second);
-
-    // //欧式距离平方
-    // return pow((current.first - goal.first), 2) +
-    //             pow((current.second - goal.second), 2);
-
-    // //欧式距离
-    // return sqrt(pow((current.first - goal.first), 2) +
-    //             pow((current.second - goal.second), 2));
   }
 
   //获得当前节点的neighbors
@@ -62,6 +55,7 @@ class Astar {
   void StartMove() {
     current_start_ = current_path_.back();
     current_path_.pop_back();
+    ++move_step_nums_;
   }
 
   //判断是否走到了终点
@@ -90,6 +84,7 @@ class Astar {
   inline std::vector<Points> get_current_path() const { return current_path_; }
   inline int get_all_expand_nums() const { return all_expand_points_count_; }
   inline int get_search_nums() const { return search_nums_count_; }
+  inline int get_move_step_nums() const { return move_step_nums_; }
   //************************************//
 
   //**********类内私有成员赋值函数**********//
@@ -116,7 +111,8 @@ class Astar {
   std::vector<Points> current_obstacle_list_;  //当前已知的障碍物list
   int current_expand_points_count_,            //一次算法中的expand计数
       all_expand_points_count_,                //整体算法中的expand计数
-      search_nums_count_;                      //搜索次数计数
+      search_nums_count_,                      //搜索次数计数
+      move_step_nums_;                         //移动步数
 
   //判断点是否在list中
   inline bool IsInList(const Points& point, const std::vector<Points>& list) {

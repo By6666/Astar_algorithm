@@ -10,3 +10,4 @@
 
 * Final outputs in the folder [outputs](./outputs)
 
+* Astar using vector for priority container [Astar_vector](./Astar_vector)

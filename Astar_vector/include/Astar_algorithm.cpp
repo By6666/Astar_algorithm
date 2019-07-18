@@ -1,10 +1,11 @@
-#include "include/Astar_algorithm.h"
+#include "Astar_algorithm.h"
+
 std::vector<std::string> sum_result;  //总结输出结果
 
 /* 进行一次总体的A*算法
  * 输入：文件序号
  * 输出：无
- * */
+ *  */
 void SearchOneMap(int map_num_) {
   //获得map信息
   GrideInput map_info(map_num_);
@@ -108,7 +109,6 @@ std::vector<CellInfo> Astar::GetNeighbors(const Points& current_pos) {
  * 输出：无
  * */
 void Astar::UpdataMapInfo() {
-  // UP
   if ((current_start_.first - 1) >= 0) {
     if (IsInList(Points(current_start_.first - 1, current_start_.second),
                  map_obstacle_list_))
@@ -138,27 +138,44 @@ void Astar::UpdataMapInfo() {
   }
 }
 
+/* 将openlist中的最小元素放到末尾
+ * 输入：无
+ * 输出：openlist中的最小元素
+ * */
+CellInfo Astar::OpenLIstPopMinElem(std::vector<CellInfo>& open_list) {
+  if (open_list.size() < 2) return open_list.back();
+
+  std::vector<CellInfo>::iterator itr =
+      std::min_element(open_list.begin(), open_list.end());
+
+  CellInfo temp = *itr;
+  *itr = open_list.back();
+  open_list.back() = temp;
+
+  return temp;
+}
+
 /* 执行一次A*算法
  * 输入：无
  * 输出：无
  * */
 void Astar::AstarGetPath() {
   {
-    std::priority_queue<CellInfo> open_list;  //存放将要遍历的点
+    std::vector<CellInfo> open_list;  //存放将要遍历的点
     std::vector<Points> close_list(
         current_obstacle_list_);  //存放已经遍历的点以及已知的地图障碍点
     std::map<Points, Points> save_path_hash;  //用于路径回溯
     std::vector<Points> path_result_list;     //存放结果
 
     CellInfo start_info = {0, 0, current_start_};  //初始化起点的信息
-    int search_successful_flg = 1;                 //搜索成功标志
+    int search_successful_flg = 1;
     current_expand_points_count_ = 0;
 
-    open_list.push(start_info);  //起点入队列
+    open_list.push_back(start_info);  //起点入队列
 
     while (!open_list.empty()) {
-      CellInfo current_cell_pos = open_list.top();
-      open_list.pop();
+      CellInfo current_cell_pos = OpenLIstPopMinElem(open_list);
+      open_list.pop_back();
       //找到终点，一次算法结束
       if (current_cell_pos.xoy_ == goal_pos_) {
         search_successful_flg = 0;  //搜索成功
@@ -170,44 +187,45 @@ void Astar::AstarGetPath() {
         close_list.push_back(current_cell_pos.xoy_);
 
         std::vector<CellInfo> neighbors = GetNeighbors(current_cell_pos.xoy_);
-
-        int8_t neighbors_count = 0;
+        int8_t neighbor_expand_cnt = 0;
         for (int i = 0; i < neighbors.size(); ++i) {
           if (!IsInList(neighbors[i].xoy_, close_list)) {
+            ++neighbor_expand_cnt;
             // g(n)
             neighbors[i].cost_to_start_ += current_cell_pos.cost_to_start_ + 1;
             // f(n)=g(n)+h(n)
             neighbors[i].all_cost_ =
                 neighbors[i].cost_to_start_ + DistenceToGoal(neighbors[i].xoy_);
-            open_list.push(neighbors[i]);
+            open_list.push_back(neighbors[i]);
             save_path_hash[neighbors[i].xoy_] = current_cell_pos.xoy_;
-            ++neighbors_count;
           }
         }
-        if (neighbors_count) ++current_expand_points_count_;
+        if (neighbor_expand_cnt) ++current_expand_points_count_;  //扩展点自曾
       }
     }
 
-    // nope path to goal
+    // there is one shortest path to goal
     if (search_successful_flg) {
       std::cout << "search fail !!" << std::endl;
     }
-    // there is one shortest path to goal
+    // nope path to goal
     else {
       std::cout << "search successfully !!" << std::endl;
       Points node = goal_pos_;
-      //得到最短路径的坐标list
+      //得到最短路径的坐标向量
       while (node != start_info.xoy_) {
         path_result_list.push_back(node);
         node = save_path_hash[node];
+        // std::cout<<"("<<node.first<<" , "<<node.second<<")"<<std::endl;
       }
     }
 
-    current_path_.clear();             //当前路径清零
-    current_path_ = path_result_list;  //赋值当前路径
     all_expand_points_count_ += current_expand_points_count_;  // expand计数累加
 
-    SearchResultPrint();  //打印一次搜索结果
+    current_path_.clear();
+    current_path_ = path_result_list;
+
+    // SearchResultPrint();
 
     ++search_nums_count_;  //搜索次数自增1
   }
